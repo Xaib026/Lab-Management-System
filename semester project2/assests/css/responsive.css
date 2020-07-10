@@ -1,0 +1,164 @@
+/*
+    - - - Custom Responsive Stylesheet
+ */
+
+@media (max-width:1200px){
+    #course-section .labs-section .item p{
+        height: 50px;
+    }
+}
+
+ @media (max-width:800px){
+     #header .header-menu #navbar-Nav .navbar-nav .nav-link{
+        padding: 10px 5px;
+        border: 0px solid #dee2e6;
+    }
+    #header .header-menu #navbar-Nav .navbar-nav li:hover {
+    background: #ea6227;
+    }
+    #header .header-menu #navbar-Nav .dropdown {
+        padding: 1rem 0;
+    }
+    #header .header-menu #navbar-Nav .dropdown a.user-nav-show{
+        background:  none;
+        border-radius: 0rem;
+        color:  #ffffff;
+        padding: 1rem 0;
+    }
+ #header .header-menu #navbar-Nav .dropdown span{
+    padding: 0rem 0.5rem 0rem 0rem;
+}
+     #page-title-section{
+        padding: 80px 0;
+    }
+    
+    #lab-section .labs-section .item,
+    #course-section .labs-section .item{
+        width: 33.3%;
+    }
+    #lab-section .labs-section .item img,
+    #course-section .labs-section .item img{
+        width: 100%;
+    }
+    #course-section .labs-section .item{
+        width: 33%;
+        margin: 0.15%;
+    }
+    #course-section .labs-section .item p{
+        height: 50px;
+    }
+    #dashboard-section .sidebar {
+    width: 25%;
+    font-size: 13.5px;
+}
+    
+/*      Dashboard Overview Page      */
+
+.overview .item{
+    width: 50%;
+}
+
+ }
+ /* @media (max-width:1024px) and (min-width:768px){
+    #dashboard-section .sidebar{
+        width: auto;
+    }
+ }
+ @media (max-width:1024px) and (min-width:992px){
+    #dashboard-section .sidebar #side-Nav a{
+        padding: 16px 8px;
+    }
+ } */
+@media (min-width: 992px){
+#dashboard-section .sidebar {
+    width: 16.6667%;
+    font-size: 13.5px;
+}
+}
+
+
+
+ /*         Max- Width : 580       */
+
+ @media (max-width: 580px) {
+     
+    
+    #banner-section .slider-caption {
+        padding: 15px 0;
+        position: initial;
+        top: 0%;
+        transform: translateY(0%);
+        z-index: 1;
+    }
+    #banner-section .slider-caption .caption-icons{
+        width: 100%;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    #banner-section .slider-caption .caption-icons .icons-item{
+        width: 25%;
+    }
+    #banner-section .slider-caption .caption-icons i.fas{
+        font-size: 28px;
+    }
+    #banner-section .slider-caption .caption-icons a.icons-item{
+       font-size: 14px;
+    }
+
+    #page-title-section{
+        padding: 40px 0;
+    }
+
+    #lab-section .labs-section .item,
+    #course-section .labs-section .item{
+        width: 50%;
+    }
+    #lab-section .labs-section .item img,
+    #course-section .labs-section .item img{
+        width: 100%;
+    }
+    #course-section .labs-section .item{
+        width: 49.5%;
+        margin: 0.25%;
+    }   
+    
+    #dashboard-section .sidebar{
+        width: 100%;
+        position: absolute;
+        z-index: 99;
+    }
+    #dashboard-section .sidebar #dashboard-brand img{
+        width: 30px;
+    }
+    #dashboard-section .sidebar #side-Nav {
+        display: none;
+    }
+
+    #dashboard-section .sidebar .toggler-btn{
+        display: block;
+    }
+    #dashboard-section .sidebar #dashboard-brand {
+        justify-content: space-between;
+    }
+    #dashboard-section #dashboard-header{
+      margin-top: 70px;
+    }
+    #dashboard-section #dashboard-header > .container > .d-flex{
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    #dashboard-section #dashboard-header .d-flex .item{
+      padding: 5px 0;
+    }
+    #dashboard-section #dashboard-header > .container > .d-flex > .item:nth-child(2){
+      display: none;
+    }
+    .overview{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .overview .item{
+        width: 46.5%;
+        margin-bottom: 0.5rem;
+    }
+ }

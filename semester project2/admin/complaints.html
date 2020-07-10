@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard- Complaints </title>
+    <!-- Favicon Link -->
+    <link rel="icon" href="assests/img/favicon.ico">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../assests/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assests/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assests/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../assests/fontawesome/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assests/css/style.css">
+    <link rel="stylesheet" href="../assests/css/responsive.css">
+
+</head>
+<body>
+
+    <div id="dashboard-section">
+        <div class="row no-gutters">
+            <div class="col-lg-2 col-md-3 col-12 sidebar-nav" style="background: #f1f1f1;">
+                <!-- Sidebar Section -->
+                <div class="sidebar">
+                    <div class="p-md-2 px-5 py-3 " id="dashboard-brand">
+                        <a href="dashboard.html"><img src="../assests/img/logo-dark.png" width="60px" alt=""></a>
+                        <button class="btn toggler-btn">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                    <!-- Sidebar Nav -->
+                    <div class="" id="side-Nav">
+                        <a href="dashboard.html"><i class="fas fa-chart-pie"></i>Overview</a>
+                        <a href="lab.html"><i class="fas fa-desktop"></i>Labs</a>
+                        <a href="courses.html"><i class="fas fa-book-open"></i>Courses</a>
+                        <a href="assignment.html"><i class="fas fa-briefcase"></i>Assignments</a>
+                        <a href="complaints.html" class="active"><i class="fas fa-lightbulb"></i>Complaints</a>
+                        <a href="announcement.html"><i class="fas fa-bullhorn"></i>Announcement</a>
+                        <a href="users.html"><i class="fas fa-users"></i>Accounts</a>
+                    </div>
+                    <!-- !Sidebar Nav -->
+                </div>
+                <!-- !Sidebar Section -->
+            </div>
+            <div class="col-lg-10 col-md-9 col-12 content-data" >
+                <!-- Header Section -->
+                <header id="dashboard-header" class="py-2 bg-dark">
+                    <div class="container">
+                        <div class="d-flex justify-content-between px-md-3 px-1">
+                            <div class="item my-auto">
+                                <a href="../index.html" class="text-white"><i class="fas fa-long-arrow-alt-left mr-2"></i> Back to Site</a>
+                            </div>
+                            <div class="item">
+                                <div class="d-flex">
+                                    <div class="item mr-1">
+                                        <div class="dropdown">
+                                    <div class="btn bg-blue text-white" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span><i class="fas fa-bell"></i></span>
+                                    </div>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Logout</a>
+                                    </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item ml-1">
+                                        <div class="dropdown">
+                                    <div class="btn bg-blue text-white" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span><i class="fas fa-envelope"></i></span>
+                                    </div>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Logout</a>
+                                    </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="dropdown">
+                                    <div class="btn text-white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="px-4">Hello! <img src="../assests/img/profile-pic.jpg" width="30px" class="ml-2 rounded-pill"></span>
+                                    </div>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item disabled" href="#">M. Shoaib <div class="user-role">Student</div></a>
+                                        <a class="dropdown-item" href="profile.html"><i class="fas fa-cog"></i>Edit Profile</a>
+                                        <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <!-- !Header Section -->
+
+                <!-- Main Dashboard Section -->
+                <main id="main-dashboard-content" class="p-3">
+                    <div class="container">
+                        <div class="dashboard-container">
+                            <div class="page-title d-flex justify-content-between py-2">
+                                <nav class="my-auto" aria-label="breadcrumb">
+                                    <ol class="breadcrumb p-0 my-auto" style="background: none;">
+                                        <li class="breadcrumb-item"><a href="dashboard.html" class="orange">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Complaints </li>
+                                    </ol>
+                                </nav>
+                                
+                                <button class="btn bg-orange text-white"  data-toggle="modal" data-target="#staticBackdrop">
+                                    <i class="fas fa-file-export mr-1"></i> Reports
+                                </button>
+                            </div>
+                            <div class="content-section py-3">
+                                <!-- Table Content Section -->
+                                <div class="table-responsive">
+                                    <table class="w-100 table-bordered table">
+                                        <thead>
+                                        <tr class="text-center">
+                                            <th>#</th>
+                                            <th>Date</th>
+                                            <th>UserID </th>
+                                            <th>Full Name</th>
+                                            <th>Email</th>
+                                            <th>Department</th>
+                                            <th width="300px" class="text-left">Issues / Complains</th>
+                                            <th>Assigned to</th>
+                                            <th>Remarks</th>
+                                            <th colspan="2">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Lab I</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td><a href="#" data-toggle="modal" data-target="#editBackdrop"><i class="fas fa-edit"></i></a></td>
+                                            <td><a href="#"><i class="fas fa-trash"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Lab I</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td><a href="#" data-toggle="modal" data-target="#editBackdrop"><i class="fas fa-edit"></i></a></td>
+                                            <td><a href="#"><i class="fas fa-trash"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Lab I</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td><a href="#" data-toggle="modal" data-target="#editBackdrop"><i class="fas fa-edit"></i></a></td>
+                                            <td><a href="#"><i class="fas fa-trash"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Lab I</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td><a href="#" data-toggle="modal" data-target="#editBackdrop"><i class="fas fa-edit"></i></a></td>
+                                            <td><a href="#"><i class="fas fa-trash"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Lab I</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td><a href="#" data-toggle="modal" data-target="#editBackdrop"><i class="fas fa-edit"></i></a></td>
+                                            <td><a href="#"><i class="fas fa-trash"></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
+                                </div>
+                                <!-- !Table Content Section -->
+
+                                <!-- Pagination -->
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <!-- !Pagination -->
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Report Modal Section -->
+                    <div class="modal fade " id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h6 class="modal-title" id="staticBackdropLabel">Complaints</h6>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Form Section -->
+                                    <section id="form-section" class="py-3">
+                                        <div class="container">
+                                            <!-- Table Content Section -->
+                                            <div class="table-responsive">
+                                                <table class="w-100 table-bordered table">
+                                                    <thead>
+                                                    <tr class="text-center">
+                                                        <th>#</th>
+                                                        <th>Date</th>
+                                                        <th>UserID </th>
+                                                        <th>Full Name</th>
+                                                        <th>Email</th>
+                                                        <th>Department</th>
+                                                        <th width="300px" class="text-left">Issues / Complains</th>
+                                                        <th>Assigned to</th>
+                                                        <th>Remarks</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Lab I</td>
+                                                        <td>10</td>
+                                                        <td>11</td>
+                                                        <td>2</td>
+                                                        <td>1</td>
+                                                        <td>2</td>
+                                                        <td>2</td>
+                                                        <td>2</td>
+                                                    </tr>
+                                                </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- !Table Content Section -->
+                                        </div>
+                                    </section>
+                                    <!-- !Form Section -->
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn bg-orange text-white"><i class="fas fa-download"></i>&nbsp; Export</button>
+                                    <button type="button" class="btn bg-orange text-white"><i class="fas fa-print"></i>&nbsp; Print</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- !Report Modal Section -->
+                    
+                     <!-- Edit Complain Modal Section -->
+                    <div class="modal fade " id="editBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h6 class="modal-title" id="editBackdropLabel">Edit Complaints</h6>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Form Section -->
+                                    <section id="form-section" class="">
+                                        <div class="container">
+                                            <form>
+                                                <input type="hidden" id="inputID" class="form-control">
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputUserID">User ID *</label>
+                                                        <input type="text" class="form-control" id="inputUserID" required>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputName">Full Name *</label>
+                                                        <input type="text" class="form-control" id="inputName" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputEmail">Email</label>
+                                                    <input type="email" class="form-control" id="inputEmail" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputDepart">Department</label>
+                                                    <select name="" id="inputDepart" class="form-control" required>
+                                                        <option  value="">Select Department</option>
+                                                        <option value="1">Technical Support</option>
+                                                        <option value="2">Administrator</option>
+                                                        <option value="3">Lab Issues</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputDetails">Issues / Complaint</label>
+                                                    <textarea id="inputDetails" cols="30" rows="5" class="form-control" required></textarea>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputAssign">Assign To *</label>
+                                                        <select class="form-control" id="inputAssign" required>
+                                                            <option value="">Ali Khan</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputRemarks">Remarks *</label>
+                                                        <input type="text" class="form-control" id="inputRemarks" required>                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="text-right">
+                                                    <button type="submit" class="btn bg-orange rounded px-4">Send Now &nbsp; <i class="fas fa-paper-plane"></i></button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                    </section>
+                                    <!-- !Form Section -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- !Edit Complain Modal Section -->
+                </main>
+                <!-- !Main Dashboard Section -->
+
+                <!-- Footer Section -->
+                <footer id="dashboard-footer" class="py-3">
+                    <p class="m-0">
+                        <a href="index.html" class="text-white">Aptech Project CLMS</a> &copy; - 2020, All rights are reserved.
+                    </p>
+                </footer>
+                <!-- Footer Section -->
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- External JS -->
+    <script src="../assests/js/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="../assests/js/bootstrap.min.js"></script>
+    <script src="../assests/js/owl.carousel.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../assests/js/script.js"></script>
+
+</body>
+</html>
